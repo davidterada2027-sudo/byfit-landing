@@ -439,6 +439,32 @@
       animation: borderShift 6s ease-in-out infinite; pointer-events: none;
     }
 
+
+    /* Mobile: slow down animations for comfort */
+    @media (max-width: 640px) {
+      [data-char] { animation-duration: 1.4s !important; }
+      [data-manifesto] span { transition-duration: 0.9s !important; }
+      section [style*="animation:fadeUp"] { animation-duration: 1.4s !important; }
+      section [style*="animation:clipUp"] { animation-duration: 1.4s !important; }
+      section [style*="animation:softIn"] { animation-duration: 1s !important; }
+      /* Logo intro breathing rooms */
+      #cine-intro.play { animation-duration: 1.4s !important; animation-delay: 2.6s !important; }
+      #cine-intro img[alt="ByFitCompany"] { animation-duration: 1.6s !important; animation-delay: 0.3s !important; }
+      #cine-intro .logo-inner > div[style*="text-align:center"] { animation-duration: 1.2s !important; animation-delay: 1.4s !important; }
+      #cine-intro .logo-inner > div:last-child > div { animation-duration: 1.8s !important; animation-delay: 2s !important; }
+      /* Ring pulses slower */
+      [style*="animation:ringWave"] { animation-duration: 5s !important; }
+      [style*="animation:pulseDot"] { animation-duration: 3.5s !important; }
+      [style*="animation:glowPulse"] { animation-duration: 5s !important; }
+      /* Marquee slower */
+      [style*="animation:marquee"] { animation-duration: 60s !important; }
+      /* Sparkles */
+      [style*="animation:sparkle"] { animation-duration: 6s !important; }
+      /* Card transitions gentler */
+      [data-card], [data-mod], [data-plan], [data-svc-enter] { transition-duration: 0.7s !important; }
+      /* Depo carousel autoplay slower / lerp softer via inline in JS handled below */
+    }
+
     /* ═══════ v6 MOBILE-FIRST OPTIMIZATIONS ═══════ */
     @media (max-width: 640px) {
       /* Nav: hide heavy items, tighten */
@@ -1737,7 +1763,7 @@ class Component extends DCLogic {
     const cine = document.getElementById("cine-intro");
     if (cine) {
       if (perf === "low") cine.remove();
-      else { cine.classList.add("play"); setTimeout(() => cine.remove(), 4200); }
+      else { cine.classList.add("play"); setTimeout(() => cine.remove(), narrow ? 5600 : 4200); }
     }
 
     // Ambient spots follow scroll (perf:high)
