@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif; background: #ffffff; color: #0A0A0A; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    a { color: #274224; text-decoration: none; }
+    a:hover { color: #162915; }
+    ::selection { background: #274224; color: #fff; }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+    @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  </style>
+</helmet>
+
+<div data-screen-label="Landing ByFitCompany" style="min-height:100vh;background:#ffffff">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav data-screen-label="Navbar" style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border-bottom:1px solid #f3f4f6">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:88px">
+      <a href="#inicio" style="flex-shrink:0">
+        <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="ByFitCompany" style="height:64px;width:auto;border-radius:8px;display:block">
+      </a>
+      <div style="display:flex;align-items:center;gap:28px">
+        <a href="#inicio" style="font-size:14px;font-weight:500;color:#274224">Início</a>
+        <a href="#sobre" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Sobre</a>
+        <a href="#beneficios" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Benefícios</a>
+        <a href="#servicos" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Serviços</a>
+        <a href="#equipe" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Equipe</a>
+        <a href="#planos" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Planos</a>
+        <a href="#depoimentos" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Depoimentos</a>
+        <a href="#contato" style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.7)" style-hover="color:#274224">Contato</a>
+      </div>
+      <a href="#contato" style="display:inline-flex;align-items:center;gap:8px;padding:10px 24px;background:#274224;color:#ffffff;font-size:14px;font-weight:600;border-radius:9999px" style-hover="background:#162915;box-shadow:0 0 40px rgba(31,138,112,0.15)">Agende sua Aula</a>
+    </div>
+    <div style="height:2px;background:linear-gradient(to right, #274224, #FF8C00);transform-origin:left"></div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <section id="inicio" data-screen-label="Hero" style="position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:#ffffff">
+    <div style="position:absolute;inset:0;z-index:0">
+      <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png" alt="Studio de Pilates ByFitCompany" style="width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.6) 50%, transparent 100%)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(to top, #ffffff 0%, transparent 40%, rgba(255,255,255,0.3) 100%)"></div>
+    </div>
+    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:96px 32px 160px;width:100%">
+      <div style="max-width:640px">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:24px">
+          <span style="width:6px;height:6px;border-radius:9999px;background:#FF8C00;animation:pulseDot 2s ease-in-out infinite"></span>
+          Pilates Consciente &amp; Premium
+        </span>
+        <h1 style="font-size:76px;font-weight:700;letter-spacing:-0.04em;color:#0A0A0A;line-height:0.98;margin:0">
+          Recupere<br>
+          seu equilíbrio<br>
+          <span style="color:#274224;font-style:italic;font-weight:300">e transforme</span><br>
+          <span style="color:#FF8C00;font-style:italic;font-weight:300">sua saúde.</span>
+        </h1>
+        <p style="margin:32px 0 0;font-size:18px;color:#525252;max-width:560px;line-height:1.7">
+          Um movimento consciente que revitaliza corpo e mente. No ByFitCompany, cuidamos de cada detalhe para guiar sua jornada de bem-estar com aulas personalizadas e profissionais dedicados a você.
+        </p>
+        <div style="margin-top:48px;display:flex;flex-wrap:wrap;gap:16px">
+          <a href="#planos" style="display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:#274224;color:#ffffff;border-radius:9999px;font-weight:600;font-size:14px;box-shadow:0 0 0 2px rgba(255,140,0,0.3)" style-hover="background:#162915;box-shadow:0 0 0 2px rgba(255,140,0,0.6), 0 0 40px rgba(31,138,112,0.15)">Agendar Minha Aula Experimental Grátis →</a>
+          <a href="#sobre" style="display:inline-flex;align-items:center;gap:8px;padding:16px 28px;border:1px solid rgba(10,10,10,0.2);color:#0A0A0A;border-radius:9999px;font-weight:600;font-size:14px;background:rgba(255,255,255,0.5)" style-hover="background:#0A0A0A;color:#ffffff">Conheça o Studio</a>
+        </div>
+      </div>
+    </div>
+    <div style="position:absolute;right:64px;top:42%;z-index:10;animation:floatY 5s ease-in-out infinite">
+      <div style="background:rgba(255,255,255,0.4);backdrop-filter:blur(24px);border-radius:24px;padding:28px;border:1px solid rgba(255,255,255,0.5);box-shadow:0 25px 50px -12px rgba(0,0,0,0.05)">
+        <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="ByFitCompany" style="height:80px;width:auto;border-radius:8px;display:block">
+        <div style="margin-top:16px;height:1px;width:100%;background:linear-gradient(to right, transparent, rgba(255,140,0,0.5), transparent)"></div>
+        <p style="margin:12px 0 0;font-size:10px;color:rgba(10,10,10,0.6);font-weight:600;letter-spacing:0.2em;text-transform:uppercase;text-align:center">Pilates Premium</p>
+      </div>
+    </div>
+    <div style="position:absolute;bottom:0;left:0;right:0;z-index:10">
+      <div style="max-width:1280px;margin:0 auto;padding:0 32px 32px">
+        <div style="background:rgba(255,255,255,0.7);backdrop-filter:blur(24px);border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);border:1px solid rgba(255,255,255,0.4);padding:24px">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center"><span style="font-size:20px">🎓</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Profissionais Qualificados</span></div>
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center"><span style="font-size:20px">⚡</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Equipamentos Modernos</span></div>
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center"><span style="font-size:20px">💚</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Atendimento Personalizado</span></div>
+            <div style="display:flex;align-items:center;gap:12px;justify-content:center"><span style="font-size:20px">❄️</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Ambiente Climatizado</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <section data-screen-label="Marquee" style="padding:32px 0;background:#0A0A0A;overflow:hidden;border-top:1px solid rgba(255,255,255,0.05);border-bottom:1px solid rgba(255,255,255,0.05)">
+    <div style="display:flex;gap:48px;width:max-content;animation:marquee 32s linear infinite">
+      <div style="display:flex;align-items:center;gap:48px;flex-shrink:0">
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Pilates Premium</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Bem-Estar</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Saúde Integral</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Movimento</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Qualidade de Vida</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Postura</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Equilíbrio</span>
+        <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="" style="height:36px;width:auto;mix-blend-mode:screen;opacity:0.6">
+      </div>
+      <div style="display:flex;align-items:center;gap:48px;flex-shrink:0">
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Pilates Premium</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Bem-Estar</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Saúde Integral</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Movimento</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Qualidade de Vida</span><span style="color:#274224;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Postura</span><span style="color:#FF8C00;font-size:20px">✦</span>
+        <span style="font-size:36px;font-weight:700;color:rgba(255,255,255,0.8);letter-spacing:-0.02em;white-space:nowrap">Equilíbrio</span>
+        <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="" style="height:36px;width:auto;mix-blend-mode:screen;opacity:0.6">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE ================= -->
+  <section id="sobre" data-screen-label="Sobre" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+      <div style="position:relative">
+        <div style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);aspect-ratio:4/3">
+          <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png" alt="Interior do studio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div style="position:absolute;bottom:-24px;right:-24px;background:#ffffff;border-radius:16px;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);padding:16px;border:1px solid #f3f4f6;outline:1px solid rgba(255,140,0,0.15)">
+          <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="Logo" style="height:64px;width:auto;border-radius:8px;display:block">
+        </div>
+      </div>
+      <div>
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Sobre a ByFitCompany</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;line-height:1.15;margin:0">Mais que um studio,<br>um <span style="color:#274224;font-style:italic;font-weight:300">estilo de vida.</span></h2>
+        <p style="margin:24px 0 0;font-size:18px;color:#525252;line-height:1.7">A Pilates ByFitCompany nasceu com o propósito de transformar vidas através do Pilates. Aqui, cada movimento é pensado para o seu bem-estar físico e mental. Contamos com profissionais especializados, equipamentos de última geração e um ambiente acolhedor que inspira você a ser a sua melhor versão.</p>
+        <div style="margin-top:32px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:12px"><span style="color:#274224;font-size:18px">✓</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Metodologia exclusiva</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="color:#FF8C00;font-size:18px">✓</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Aulas personalizadas</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="color:#274224;font-size:18px">✓</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Foco em resultados reais</span></div>
+          <div style="display:flex;align-items:center;gap:12px"><span style="color:#FF8C00;font-size:18px">✓</span><span style="font-size:14px;font-weight:500;color:rgba(10,10,10,0.8)">Ambiente moderno e climatizado</span></div>
+        </div>
+        <a href="#contato" style="display:inline-flex;align-items:center;margin-top:32px;padding:14px 28px;border:1px solid rgba(10,10,10,0.2);color:#0A0A0A;border-radius:9999px;font-weight:600;font-size:14px" style-hover="background:#0A0A0A;color:#ffffff">Nossa História</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MANIFESTO ================= -->
+  <section data-screen-label="Manifesto" style="position:relative;padding:160px 0;background:#0A0A0A;overflow:hidden">
+    <div style="position:absolute;top:30%;left:25%;width:500px;height:500px;border-radius:9999px;background:rgba(255,140,0,0.1);filter:blur(150px);pointer-events:none"></div>
+    <div style="position:absolute;bottom:25%;right:25%;width:400px;height:400px;border-radius:9999px;background:rgba(58,90,54,0.06);filter:blur(120px);pointer-events:none"></div>
+    <div style="position:relative;z-index:10;max-width:1152px;margin:0 auto;padding:0 32px">
+      <span style="display:block;text-align:center;color:#3A5A36;font-size:12px;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;margin-bottom:56px">Nossa Filosofia</span>
+      <p style="font-size:60px;font-weight:700;line-height:1.2;letter-spacing:-0.02em;color:#ffffff;margin:0;text-align:center;text-wrap:balance">Cada movimento é uma intenção. Cada respiração é um passo. Cada sessão é uma transformação.</p>
+    </div>
+  </section>
+
+  <!-- ================= LOGO STATEMENT ================= -->
+  <section data-screen-label="Logo Statement" style="position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;background:#ffffff;overflow:hidden;padding:112px 0">
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+      <div style="width:700px;height:700px;border-radius:9999px;border:1px solid rgba(39,66,36,0.1)"></div>
+    </div>
+    <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none">
+      <div style="width:480px;height:480px;border-radius:9999px;border:1px solid rgba(255,140,0,0.15)"></div>
+    </div>
+    <div style="position:relative;z-index:10;text-align:center;padding:0 16px">
+      <div style="display:flex;justify-content:center;margin-bottom:40px">
+        <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="ByFitCompany" style="height:144px;width:auto;border-radius:8px">
+      </div>
+      <p style="font-size:32px;font-weight:300;color:#0A0A0A;letter-spacing:-0.01em;max-width:640px;margin:0 auto;line-height:1.6">Onde o <span style="color:#274224;font-weight:500">movimento</span> encontra o <span style="color:#FF8C00;font-weight:500">bem-estar</span>.</p>
+      <div style="margin:32px auto 0;height:1px;width:96px;background:linear-gradient(to right, #274224, #FF8C00)"></div>
+      <p style="margin:20px 0 0;font-size:12px;color:#525252;font-weight:500;letter-spacing:0.25em;text-transform:uppercase">ByFitCompany · Pilates Premium</p>
+    </div>
+  </section>
+
+  <!-- ================= BENEFÍCIOS ================= -->
+  <section id="beneficios" data-screen-label="Benefícios" style="padding:112px 0;background:#F8FAF9">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Benefícios do Pilates</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Corpo e mente em <span style="color:#274224;font-style:italic;font-weight:300">harmonia</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px">
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(39,66,36,0.1);display:flex;align-items:center;justify-content:center;color:#274224;font-size:20px">⌖</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Melhora da Postura</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Alinhamento corporal e consciência postural</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:20px">▲</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Fortalecimento Muscular</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Tonificação profunda e resistência</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(39,66,36,0.1);display:flex;align-items:center;justify-content:center;color:#274224;font-size:20px">↔</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Flexibilidade</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Amplitude de movimento progressiva</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:20px">⚖</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Equilíbrio e Coordenação</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Estabilidade e controle do corpo</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(39,66,36,0.1);display:flex;align-items:center;justify-content:center;color:#274224;font-size:20px">✥</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Mobilidade</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Liberdade de movimento sem dor</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:20px">♥</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Redução de Dores</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Alívio de tensões e desconfortos</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(39,66,36,0.1);display:flex;align-items:center;justify-content:center;color:#274224;font-size:20px">☺</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Bem-estar Físico e Mental</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Saúde integral corpo e mente</p>
+        </div>
+        <div style="background:#ffffff;border-radius:16px;padding:24px;text-align:center;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);border:1px solid #f3f4f6" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+          <div style="width:48px;height:48px;margin:0 auto 16px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:20px">✦</div>
+          <h3 style="font-size:16px;font-weight:600;color:#0A0A0A;margin:0">Qualidade de Vida</h3>
+          <p style="margin:4px 0 0;font-size:12px;color:#525252">Mais energia e disposição diária</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section data-screen-label="Stats" style="position:relative;padding:140px 0;background:#0A0A0A;overflow:hidden">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:9999px;background:rgba(39,66,36,0.2);filter:blur(180px);pointer-events:none"></div>
+    <div style="position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+        <div style="text-align:center">
+          <div style="font-size:88px;font-weight:700;color:#ffffff;letter-spacing:-0.04em;line-height:1">+800</div>
+          <div style="margin:12px auto 0;height:1px;width:48px;background:#3A5A36"></div>
+          <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Alunos Atendidos</p>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:88px;font-weight:700;color:#ffffff;letter-spacing:-0.04em;line-height:1">+10</div>
+          <div style="margin:12px auto 0;height:1px;width:48px;background:#3A5A36"></div>
+          <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Anos de Experiência</p>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:88px;font-weight:700;color:#ffffff;letter-spacing:-0.04em;line-height:1">98%</div>
+          <div style="margin:12px auto 0;height:1px;width:48px;background:#3A5A36"></div>
+          <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Índice de Satisfação</p>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:88px;font-weight:700;color:#ffffff;letter-spacing:-0.04em;line-height:1">5.000</div>
+          <div style="margin:12px auto 0;height:1px;width:48px;background:#3A5A36"></div>
+          <p style="margin:12px 0 0;font-size:14px;color:rgba(255,255,255,0.5);font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Aulas Realizadas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section id="servicos" data-screen-label="Serviços" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Nossos Serviços</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">O Pilates ideal para <span style="color:#274224;font-style:italic;font-weight:300">você</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <div style="background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #f3f4f6;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);height:100%;display:flex;flex-direction:column" style-hover="box-shadow:0 25px 50px -12px rgba(0,0,0,0.08)">
+            <div style="position:relative;height:192px;overflow:hidden">
+              <img src="{{ s.img }}" alt="{{ s.title }}" style="width:100%;height:100%;object-fit:cover">
+              <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.4), transparent)"></div>
+            </div>
+            <div style="padding:24px;flex:1;display:flex;flex-direction:column">
+              <h3 style="font-size:18px;font-weight:700;color:#0A0A0A;margin:0">{{ s.title }}</h3>
+              <p style="margin:8px 0 0;font-size:14px;color:#525252;line-height:1.6;flex:1">{{ s.desc }}</p>
+              <a href="#contato" style="margin-top:16px;display:inline-flex;font-size:14px;font-weight:600;color:{{ s.accent }}">Saiba mais →</a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIAIS ================= -->
+  <section data-screen-label="Diferenciais" style="background:#F8FAF9;padding:112px 0">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px 40px;text-align:center">
+      <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Nossos Diferenciais</span>
+      <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Por que escolher a <span style="color:#274224;font-style:italic;font-weight:300">Pilates ByFitCompany?</span></h2>
+    </div>
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px;display:flex;flex-direction:column;gap:24px">
+      <sc-for list="{{ diffs }}" as="d" hint-placeholder-count="6">
+        <div style="max-width:1024px;margin:0 auto;width:100%;border-radius:24px;padding:48px;border:1px solid {{ d.border }};background:{{ d.bg }};color:{{ d.fg }};box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);display:flex;align-items:center;gap:48px;box-sizing:border-box">
+          <div style="flex-shrink:0;width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:{{ d.iconBg }};font-size:26px">{{ d.icon }}</div>
+          <div style="flex:1">
+            <span style="font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:{{ d.tagColor }}">{{ d.num }} / 06</span>
+            <h3 style="font-size:30px;font-weight:700;margin:4px 0 0">{{ d.title }}</h3>
+            <p style="margin:8px 0 0;font-size:16px;color:{{ d.descColor }}">{{ d.desc }}</p>
+          </div>
+          <div style="font-size:96px;font-weight:700;line-height:1;color:{{ d.numColor }}">{{ d.num }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ================= ESTÚDIO ================= -->
+  <section id="estudio" data-screen-label="Estúdio" style="position:relative;padding:112px 0;background:#ffffff;overflow:hidden">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:56px">
+        <div style="max-width:640px">
+          <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">
+            <span style="width:6px;height:6px;border-radius:9999px;background:linear-gradient(to right, #274224, #FF8C00)"></span>
+            Nosso Estúdio
+          </span>
+          <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Um espaço desenhado para o <span style="color:#274224;font-style:italic;font-weight:300">seu bem-estar</span></h2>
+        </div>
+        <p style="font-size:16px;color:#525252;line-height:1.7;max-width:448px;margin:0">Cada detalhe foi pensado para transmitir tranquilidade e sofisticação — do piso em madeira natural à iluminação acolhedora que envolve o ambiente.</p>
+      </div>
+      <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05)">
+        <div style="position:relative;height:75vh">
+          <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png" alt="Interior do estúdio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,10,0.7), rgba(10,10,10,0.1) 50%, transparent)"></div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:56px">
+          <div style="max-width:576px">
+            <p style="font-size:12px;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:#FF8C00;margin:0 0 12px">ByFitCompany · Pilates Premium</p>
+            <h3 style="font-size:36px;font-weight:700;color:#ffffff;line-height:1.2;margin:0">Onde o movimento encontra a elegância</h3>
+            <a href="#contato" style="margin-top:24px;display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#ffffff;color:#0A0A0A;font-size:14px;font-weight:600;border-radius:9999px" style-hover="background:#FF8C00;color:#ffffff">Agende uma visita ↗</a>
+          </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:56px">
+        <div style="border-top:1px solid #e5e7eb;padding-top:20px">
+          <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0 0 8px">Madeira natural</h4>
+          <p style="font-size:14px;color:#525252;line-height:1.7;margin:0">Piso e painéis em carvalho que trazem calor ao ambiente.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding-top:20px">
+          <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0 0 8px">Iluminação acolhedora</h4>
+          <p style="font-size:14px;color:#525252;line-height:1.7;margin:0">Luz difusa e backlights que criam uma atmosfera serena.</p>
+        </div>
+        <div style="border-top:1px solid #e5e7eb;padding-top:20px">
+          <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0 0 8px">Equipamentos premium</h4>
+          <p style="font-size:14px;color:#525252;line-height:1.7;margin:0">Reformers e estruturas profissionais de alta performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EQUIPE ================= -->
+  <section id="equipe" data-screen-label="Equipe" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Nossa Equipe</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Profissionais que fazem a <span style="color:#274224;font-style:italic;font-weight:300">diferença</span></h2>
+        <p style="margin:16px 0 0;font-size:16px;color:#525252">Especialistas apaixonados pelo que fazem e comprometidos com seus resultados.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+        <sc-for list="{{ team }}" as="m" hint-placeholder-count="4">
+          <div style="text-align:center">
+            <div style="position:relative;width:160px;height:160px;margin:0 auto 16px">
+              <img src="{{ m.img }}" alt="{{ m.name }}" style="width:100%;height:100%;object-fit:cover;border-radius:9999px;border:4px solid #ffffff;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05)">
+            </div>
+            <h3 style="font-size:18px;font-weight:700;color:#0A0A0A;margin:0">{{ m.name }}</h3>
+            <p style="font-size:14px;color:#274224;font-weight:500;margin:2px 0 0">{{ m.role }}</p>
+            <p style="font-size:12px;color:#525252;margin:4px 0 0">{{ m.specialty }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPOIMENTOS ================= -->
+  <section id="depoimentos" data-screen-label="Depoimentos" style="padding:112px 0;background:#F8FAF9">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Depoimentos</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Histórias que nos <span style="color:#274224;font-style:italic;font-weight:300">inspiram</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <sc-for list="{{ visibleTestimonials }}" as="t" hint-placeholder-count="3">
+          <div style="background:#ffffff;border-radius:16px;padding:32px;border:1px solid #f3f4f6;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06)">
+            <span style="font-size:30px;color:rgba(39,66,36,0.3);font-weight:700">"</span>
+            <p style="font-size:16px;color:#525252;line-height:1.7;margin:-8px 0 0">{{ t.text }}</p>
+            <div style="margin-top:16px;display:flex;align-items:center;justify-content:space-between">
+              <p style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0">{{ t.name }}</p>
+              <span style="color:#facc15;font-size:14px;letter-spacing:2px">★★★★★</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:center;gap:12px;margin-top:32px">
+        <button onClick="{{ prevTestimonial }}" style="width:40px;height:40px;border-radius:9999px;background:#ffffff;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:#0A0A0A" style-hover="background:#274224;color:#ffffff;border-color:#274224">‹</button>
+        <button onClick="{{ nextTestimonial }}" style="width:40px;height:40px;border-radius:9999px;background:#ffffff;border:1px solid #e5e7eb;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;color:#0A0A0A" style-hover="background:#274224;color:#ffffff;border-color:#274224">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERIA ================= -->
+  <section id="galeria" data-screen-label="Galeria" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Galeria</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Conheça nosso <span style="color:#274224;font-style:italic;font-weight:300">espaço</span></h2>
+      </div>
+      <div style="columns:3;column-gap:16px">
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png" alt="Aula de Pilates" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></div>
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png" alt="Interior do Studio" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"></div>
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png" alt="Detalhe Pilates" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"></div>
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png" alt="Aula em Grupo" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></div>
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png" alt="Pilates Gestantes" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"></div>
+        <div style="break-inside:avoid;border-radius:16px;overflow:hidden;margin-bottom:16px"><img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png" alt="Visão do Studio" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PLANOS ================= -->
+  <section id="planos" data-screen-label="Planos" style="padding:112px 0;background:#F8FAF9">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Nossos Planos</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Invista na sua <span style="color:#274224;font-style:italic;font-weight:300">saúde</span></h2>
+        <p style="margin:16px 0 0;font-size:16px;color:#525252">Turmas reduzidas, máximo 4 alunos por turma, atendimento personalizado.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1024px;margin:0 auto;align-items:stretch">
+        <div style="position:relative;border-radius:24px;padding:40px;background:#ffffff;border:1px solid #f3f4f6;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);display:flex;flex-direction:column">
+          <h3 style="font-size:18px;font-weight:700;color:#0A0A0A;margin:0">Essencial</h3>
+          <p style="font-size:12px;color:#525252;margin:4px 0 0">1x por semana</p>
+          <div style="margin:24px 0 28px"><span style="font-size:14px;color:#525252">R$</span><span style="font-size:48px;font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">200</span><span style="font-size:14px;color:#525252">/mês</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Pilates em aparelhos</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Turmas reduzidas (máx. 4)</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Avaliação inicial</span></div>
+          </div>
+          <a href="#contato" style="display:block;text-align:center;padding:16px;border-radius:9999px;font-weight:600;font-size:14px;background:#0A0A0A;color:#ffffff" style-hover="background:#274224">Quero começar agora</a>
+        </div>
+        <div style="position:relative;border-radius:24px;padding:40px;background:#ffffff;border:2px solid #274224;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);transform:scale(1.04);z-index:10;display:flex;flex-direction:column">
+          <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);padding:6px 20px;font-size:12px;font-weight:700;border-radius:9999px;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);background:#274224;color:#ffffff;letter-spacing:0.02em;white-space:nowrap">Mais Escolhido</span>
+          <h3 style="font-size:18px;font-weight:700;color:#0A0A0A;margin:0">Equilíbrio</h3>
+          <p style="font-size:12px;color:#525252;margin:4px 0 0">2x por semana</p>
+          <div style="margin:24px 0 28px"><span style="font-size:14px;color:#525252">R$</span><span style="font-size:48px;font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">269</span><span style="font-size:14px;color:#525252">/mês</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#274224;color:#ffffff;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Pilates em aparelhos</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#274224;color:#ffffff;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Musculação e ginástica</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#274224;color:#ffffff;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Turmas reduzidas (máx. 4)</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:#274224;color:#ffffff;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Bioimpedância ilimitada</span></div>
+          </div>
+          <a href="#contato" style="display:block;text-align:center;padding:16px;border-radius:9999px;font-weight:600;font-size:14px;background:#274224;color:#ffffff" style-hover="background:#162915;box-shadow:0 0 40px rgba(31,138,112,0.15)">Quero começar agora</a>
+        </div>
+        <div style="position:relative;border-radius:24px;padding:40px;background:#ffffff;border:1px solid #f3f4f6;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);display:flex;flex-direction:column">
+          <h3 style="font-size:18px;font-weight:700;color:#0A0A0A;margin:0">Premium</h3>
+          <p style="font-size:12px;color:#525252;margin:4px 0 0">3x por semana</p>
+          <div style="margin:24px 0 28px"><span style="font-size:14px;color:#525252">R$</span><span style="font-size:48px;font-weight:800;letter-spacing:-0.02em;color:#0A0A0A">350</span><span style="font-size:14px;color:#525252">/mês</span></div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:14px;margin-bottom:32px">
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Pilates em aparelhos</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Musculação, ginástica e lutas</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Acompanhamento corporal premium</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Monitoramento de evolução</span></div>
+            <div style="display:flex;align-items:flex-start;gap:12px"><span style="margin-top:2px;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid #d1d5db;background:rgba(39,66,36,0.05);color:#274224;font-size:12px;font-weight:700">✓</span><span style="font-size:14px;color:#525252">Prioridade em horários</span></div>
+          </div>
+          <a href="#contato" style="display:block;text-align:center;padding:16px;border-radius:9999px;font-weight:600;font-size:14px;background:#0A0A0A;color:#ffffff" style-hover="background:#274224">Quero começar agora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSTAGRAM ================= -->
+  <section id="instagram" data-screen-label="Instagram" style="position:relative;padding:112px 0;background:#F8FAF9;overflow:hidden">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="max-width:640px;margin:0 auto 64px;text-align:center">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:#ffffff;color:#FF8C00;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06)">
+          <span style="width:8px;height:8px;border-radius:9999px;background:#FF8C00;animation:pulseDot 2s ease-in-out infinite"></span>
+          @pilatesbyfitcompany
+        </span>
+        <h2 style="font-size:52px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Nosso dia a dia no <span style="color:#274224;font-style:italic;font-weight:300;border-bottom:3px solid #FF8C00">Instagram</span></h2>
+        <p style="margin:24px 0 0;font-size:18px;color:#525252;line-height:1.7">Acompanhe os bastidores do estúdio, dicas de bem-estar e a nossa rotina em movimento.</p>
+      </div>
+      <div style="position:relative;border-radius:32px;border:1px solid rgba(255,255,255,0.6);box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);overflow:hidden;background:#ffffff;max-width:1024px;margin:0 auto">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:28px;border-bottom:1px solid #f3f4f6">
+          <div style="display:flex;align-items:center;gap:16px">
+            <div style="padding:3px;border-radius:9999px;background:linear-gradient(to top right, #FF8C00, #ec4899, #9333ea)">
+              <div style="padding:2px;background:#ffffff;border-radius:9999px">
+                <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="ByFitCompany" style="height:64px;width:64px;border-radius:9999px;object-fit:cover;display:block">
+              </div>
+            </div>
+            <div>
+              <p style="font-weight:600;color:#0A0A0A;font-size:16px;margin:0;display:flex;align-items:center;gap:6px">pilatesbyfitcompany <span style="display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:9999px;background:#274224;color:#ffffff;font-size:10px">✓</span></p>
+              <p style="font-size:12px;color:#525252;margin:2px 0 0">Pilates Premium · Curitiba</p>
+            </div>
+          </div>
+          <button onClick="{{ toggleFollow }}" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;font-size:14px;font-weight:600;border-radius:12px;border:none;cursor:pointer;background:{{ followBg }};color:{{ followFg }}">{{ followLabel }}</button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px">
+          <sc-for list="{{ instaTiles }}" as="tile" hint-placeholder-count="9">
+            <div style="position:relative;aspect-ratio:1;overflow:hidden;border-radius:6px;background:linear-gradient(to bottom right, rgba(39,66,36,0.1), rgba(255,140,0,0.1));display:flex;align-items:center;justify-content:center">
+              <img src="{{ tile.img }}" alt="Publicação do Instagram" style="width:100%;height:100%;object-fit:cover;display:block">
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;padding:20px;border-top:1px solid #f3f4f6">
+          <span style="color:#FF8C00;font-size:16px">◎</span>
+          <p style="font-size:14px;color:#525252;margin:0">Siga <span style="font-weight:600;color:#0A0A0A">@pilatesbyfitcompany</span> e fique por dentro de tudo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" data-screen-label="FAQ" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:768px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Perguntas Frequentes</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Tire suas <span style="color:#274224;font-style:italic;font-weight:300">dúvidas</span></h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="7">
+          <details style="background:#F8FAF9;border:1px solid #f3f4f6;border-radius:16px;padding:0 24px">
+            <summary style="font-size:16px;font-weight:600;color:#0A0A0A;padding:20px 0;cursor:pointer;list-style:none">{{ f.q }}</summary>
+            <p style="font-size:14px;color:#525252;line-height:1.7;margin:0;padding-bottom:20px">{{ f.a }}</p>
+          </details>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section data-screen-label="CTA" style="position:relative;padding:80px 0;background:#274224;overflow:hidden">
+    <div style="position:absolute;top:-80px;left:10%;width:320px;height:320px;border-radius:9999px;background:rgba(255,140,0,0.12);filter:blur(100px);pointer-events:none"></div>
+    <div style="position:absolute;bottom:-80px;right:10%;width:380px;height:380px;border-radius:9999px;background:rgba(255,255,255,0.08);filter:blur(110px);pointer-events:none"></div>
+    <div style="position:relative;z-index:10;max-width:896px;margin:0 auto;padding:0 32px;text-align:center">
+      <h2 style="font-size:36px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;margin:0">Pronto para transformar sua vida?</h2>
+      <p style="margin:16px auto 0;font-size:16px;color:rgba(255,255,255,0.8);max-width:576px">Agende agora sua aula experimental e sinta o poder do Pilates na prática.</p>
+      <a href="#contato" style="display:inline-flex;align-items:center;gap:8px;margin-top:32px;padding:16px 32px;background:#ffffff;color:#274224;border-radius:9999px;font-weight:600;font-size:14px;box-shadow:0 0 0 2px rgba(255,140,0,0.4)" style-hover="background:#f3f4f6;box-shadow:0 0 0 2px rgba(255,140,0,0.6)">Agende sua Aula Experimental →</a>
+    </div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section id="contato" data-screen-label="Contato" style="padding:112px 0;background:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:0 32px">
+      <div style="text-align:center;max-width:768px;margin:0 auto 64px">
+        <span style="display:inline-block;padding:6px 16px;background:rgba(39,66,36,0.1);color:#274224;font-size:12px;font-weight:600;border-radius:9999px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px">Contato</span>
+        <h2 style="font-size:44px;font-weight:700;letter-spacing:-0.02em;color:#0A0A0A;margin:0">Fale <span style="color:#274224;font-style:italic;font-weight:300">conosco</span></h2>
+        <p style="margin:16px 0 0;font-size:16px;color:#525252">Estamos prontos para ajudar você a dar o primeiro passo.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px">
+        <form style="display:flex;flex-direction:column;gap:16px">
+          <input type="text" placeholder="Seu nome" style="width:100%;box-sizing:border-box;padding:16px 20px;background:#F8FAF9;border-radius:12px;border:1px solid #f3f4f6;font-size:14px;font-family:inherit;outline:none" style-focus="border-color:#274224;box-shadow:0 0 0 2px rgba(39,66,36,0.3)">
+          <input type="tel" placeholder="Telefone" style="width:100%;box-sizing:border-box;padding:16px 20px;background:#F8FAF9;border-radius:12px;border:1px solid #f3f4f6;font-size:14px;font-family:inherit;outline:none" style-focus="border-color:#274224;box-shadow:0 0 0 2px rgba(39,66,36,0.3)">
+          <input type="email" placeholder="E-mail" style="width:100%;box-sizing:border-box;padding:16px 20px;background:#F8FAF9;border-radius:12px;border:1px solid #f3f4f6;font-size:14px;font-family:inherit;outline:none" style-focus="border-color:#274224;box-shadow:0 0 0 2px rgba(39,66,36,0.3)">
+          <textarea placeholder="Sua mensagem" rows="4" style="width:100%;box-sizing:border-box;padding:16px 20px;background:#F8FAF9;border-radius:12px;border:1px solid #f3f4f6;font-size:14px;font-family:inherit;outline:none;resize:none" style-focus="border-color:#274224;box-shadow:0 0 0 2px rgba(39,66,36,0.3)"></textarea>
+          <button type="button" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:16px 32px;background:#274224;color:#ffffff;border-radius:9999px;font-weight:600;font-size:14px;border:none;cursor:pointer;font-family:inherit" style-hover="background:#162915;box-shadow:0 0 40px rgba(31,138,112,0.15)">➤ Enviar Mensagem</button>
+        </form>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="background:#F8FAF9;border-radius:16px;padding:24px;border:1px solid #f3f4f6;display:flex;align-items:flex-start;gap:16px">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(39,66,36,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#274224;font-size:18px">⌾</div>
+            <div>
+              <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0">Onde estamos</h4>
+              <p style="font-size:14px;color:#525252;margin:4px 0 0;line-height:1.6">R. Alm. Alexandrino, 1460 — Afonso Pena,<br>São José dos Pinhais — PR</p>
+            </div>
+          </div>
+          <div style="background:#F8FAF9;border-radius:16px;padding:24px;border:1px solid #f3f4f6;display:flex;align-items:flex-start;gap:16px">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#FF8C00;font-size:18px">◷</div>
+            <div>
+              <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0">Horários</h4>
+              <p style="font-size:14px;color:#525252;margin:4px 0 0;line-height:1.6">Seg — Sex: 06h às 21h<br>Sábado: 07h às 12h</p>
+            </div>
+          </div>
+          <div style="background:#F8FAF9;border-radius:16px;padding:24px;border:1px solid #f3f4f6;display:flex;align-items:flex-start;gap:16px">
+            <div style="width:40px;height:40px;border-radius:12px;background:rgba(255,140,0,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#FF8C00;font-size:18px">✆</div>
+            <div>
+              <h4 style="font-size:14px;font-weight:700;color:#0A0A0A;margin:0">WhatsApp</h4>
+              <a href="#contato" style="font-size:14px;color:#274224;font-weight:500;margin-top:4px;display:inline-block">(41) 99999-9999</a>
+            </div>
+          </div>
+          <div style="border-radius:16px;overflow:hidden;height:192px;border:1px solid #f3f4f6;background:repeating-linear-gradient(45deg, #F8FAF9, #F8FAF9 12px, #f1f5f3 12px, #f1f5f3 24px);display:flex;align-items:center;justify-content:center">
+            <span style="font-family:ui-monospace, monospace;font-size:12px;color:#525252;background:#ffffff;padding:6px 14px;border-radius:8px;border:1px solid #e5e7eb">mapa · Google Maps embed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer data-screen-label="Footer" style="background:#0A0A0A;color:#ffffff">
+    <div style="max-width:1280px;margin:0 auto;padding:80px 32px">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:64px">
+        <div style="display:flex;flex-direction:column;align-items:flex-start">
+          <div style="background:#ffffff;border-radius:12px;padding:12px;outline:1px solid rgba(255,140,0,0.3);box-shadow:0 8px 30px -8px rgba(255,140,0,0.25)">
+            <img src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="ByFitCompany" style="height:40px;width:auto;border-radius:6px;display:block">
+          </div>
+          <p style="margin:20px 0 0;font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:288px">Transformando vidas através do Pilates. Saúde, movimento e bem-estar em um só lugar.</p>
+        </div>
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 20px;letter-spacing:0.08em;text-transform:uppercase">Links Rápidos</h4>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <a href="#inicio" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Início</a>
+            <a href="#sobre" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Sobre</a>
+            <a href="#beneficios" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Benefícios</a>
+            <a href="#servicos" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Serviços</a>
+            <a href="#planos" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Planos</a>
+            <a href="#contato" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#3A5A36">Contato</a>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 20px;letter-spacing:0.08em;text-transform:uppercase">Contato</h4>
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:flex-start;gap:12px">
+              <span style="width:32px;height:32px;border-radius:8px;background:rgba(255,140,0,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#FF8C00;font-size:14px">⌾</span>
+              <span style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;padding-top:6px">R. Alm. Alexandrino, 1460 — Afonso Pena, São José dos Pinhais — PR</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px">
+              <span style="width:32px;height:32px;border-radius:8px;background:rgba(255,140,0,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#FF8C00;font-size:14px">✆</span>
+              <a href="#contato" style="font-size:14px;color:rgba(255,255,255,0.6)" style-hover="color:#FF8C00">(41) 99999-9999</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 style="font-size:14px;font-weight:700;margin:0 0 20px;letter-spacing:0.08em;text-transform:uppercase">Redes Sociais</h4>
+          <div style="display:flex;gap:12px">
+            <a href="#instagram" aria-label="Instagram" style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.1);outline:1px solid rgba(255,140,0,0.3);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:18px" style-hover="background:#FF8C00;color:#ffffff">◎</a>
+            <a href="#contato" aria-label="Facebook" style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.1);outline:1px solid rgba(255,140,0,0.3);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:18px;font-weight:700" style-hover="background:#FF8C00;color:#ffffff">f</a>
+            <a href="#contato" aria-label="WhatsApp" style="width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.1);outline:1px solid rgba(255,140,0,0.3);display:flex;align-items:center;justify-content:center;color:#FF8C00;font-size:18px" style-hover="background:#FF8C00;color:#ffffff">✆</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <p style="font-size:12px;color:rgba(255,255,255,0.4);margin:0">© 2026 ByFitCompany. Todos os direitos reservados.</p>
+        <div style="display:flex;gap:24px">
+          <a href="#inicio" style="font-size:12px;color:rgba(255,255,255,0.4)" style-hover="color:rgba(255,255,255,0.6)">Política de Privacidade</a>
+          <a href="#inicio" style="font-size:12px;color:rgba(255,255,255,0.4)" style-hover="color:rgba(255,255,255,0.6)">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLUTUANTES ================= -->
+  <sc-if value="{{ showFloating }}" hint-placeholder-val="{{ true }}">
+    <div style="position:fixed;bottom:24px;right:24px;z-index:60;display:flex;flex-direction:column;gap:12px;align-items:flex-end">
+      <a href="#planos" style="display:inline-flex;align-items:center;gap:8px;padding:14px 22px;background:#274224;color:#ffffff;border-radius:9999px;font-weight:600;font-size:13px;box-shadow:0 10px 30px -6px rgba(0,0,0,0.3)" style-hover="background:#162915">Agende sua Aula Grátis</a>
+      <a href="#contato" aria-label="WhatsApp" style="width:56px;height:56px;border-radius:9999px;background:#25D366;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 10px 30px -6px rgba(0,0,0,0.3)" style-hover="transform:scale(1.06)">✆</a>
+    </div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;botoesFlutuantes&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Comportamento&quot; }
+}">
+class Component extends DCLogic {
+  state = { testimonialIndex: 0, following: false };
+
+  renderVals() {
+    const testimonials = [
+      { name: "Mariana A.", text: "Minha postura melhorou muito e as dores nas costas sumiram. Melhor decisão!" },
+      { name: "Lucas P.", text: "Ambiente incrível, profissionais dedicados e um método que realmente funciona." },
+      { name: "Fernanda L.", text: "O Pilates mudou minha qualidade de vida. Mais energia, disposição e autoestima!" },
+      { name: "Carlos M.", text: "Após a cirurgia, a reabilitação com Pilates foi essencial. Equipe nota 10!" },
+      { name: "Patrícia R.", text: "Fiz Pilates durante toda a gestação. Me senti segura e acolhida. Recomendo!" },
+    ];
+    const i = this.state.testimonialIndex;
+    const visibleTestimonials = [0, 1, 2].map((k) => testimonials[(i + k) % testimonials.length]);
+
+    const services = [
+      { title: "Pilates Individual", desc: "Atenção total e plano personalizado para seus objetivos.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png", accent: "#274224" },
+      { title: "Pilates em Grupo", desc: "Motivação, energia e evolução em um ambiente leve.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png", accent: "#274224" },
+      { title: "Pilates para Gestantes", desc: "Segurança e conforto em todas as fases da gestação.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png", accent: "#274224" },
+      { title: "Pilates Terapêutico", desc: "Alívio de dores e reabilitação com acompanhamento especializado.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png", accent: "#274224" },
+      { title: "Reabilitação Postural", desc: "Tratamentos personalizados para correção da postura.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png", accent: "#274224" },
+      { title: "Treinamento Funcional", desc: "Força, resistência e condicionamento com método.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png", accent: "#FF8C00" },
+    ];
+
+    const diffData = [
+      { icon: "♥", title: "Atendimento Humanizado", desc: "Cuidamos de você como único, com atenção e carinho em cada detalhe do seu percurso." },
+      { icon: "☑", title: "Avaliação Personalizada", desc: "Um plano exclusivo, traçado a partir dos seus objetivos, limites e potencial." },
+      { icon: "⚙", title: "Equipamentos Profissionais", desc: "Aparelhos de última geração que oferecem a melhor experiência em Pilates." },
+      { icon: "★", title: "Professores Certificados", desc: "Profissionais especializados com formação contínua e paixão pelo que fazem." },
+      { icon: "⌂", title: "Ambiente Confortável", desc: "Espaço climatizado, acolhedor e pensado nos mínimos detalhes para seu bem-estar." },
+      { icon: "◷", title: "Horários Flexíveis", desc: "Agendamento adaptável à sua rotina, porque sua saúde não pode esperar." },
+    ];
+    const diffs = diffData.map((d, idx) => {
+      const even = idx % 2 === 0;
+      return {
+        ...d,
+        num: "0" + (idx + 1),
+        bg: even ? "#ffffff" : "#274224",
+        fg: even ? "#0A0A0A" : "#ffffff",
+        border: even ? "#f3f4f6" : "#162915",
+        iconBg: even ? "rgba(39,66,36,0.1)" : "rgba(255,255,255,0.15)",
+        tagColor: even ? "#274224" : "rgba(255,255,255,0.6)",
+        descColor: even ? "#525252" : "rgba(255,255,255,0.8)",
+        numColor: even ? "#f3f4f6" : "rgba(255,255,255,0.1)",
+      };
+    });
+
+    const team = [
+      { name: "Juliana Mendes", role: "Fisioterapeuta", specialty: "Especialista em Pilates", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1288c490e_generated_2cf5db51.png" },
+      { name: "Rafael Oliveira", role: "Instrutor de Pilates", specialty: "Treinamento Funcional", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/9560c1e92_generated_e7569ea4.png" },
+      { name: "Camila Rocha", role: "Fisioterapeuta", specialty: "Pilates para Gestantes", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/bb65b5474_generated_f8f6d2cf.png" },
+      { name: "Bruno Santos", role: "Instrutor de Pilates", specialty: "Reabilitação Postural", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e910ffe0a_generated_30a0ab42.png" },
+    ];
+
+    const galleryImgs = [
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png",
+      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
+    ];
+    const instaTiles = galleryImgs.map((img) => ({ img }));
+
+    const faqs = [
+      { q: "Preciso ter experiência para começar Pilates?", a: "Não! O Pilates é adaptado para todos os níveis. Nossos profissionais fazem uma avaliação inicial e criam um plano personalizado para você." },
+      { q: "Quantas vezes por semana devo fazer Pilates?", a: "Recomendamos de 2 a 3 vezes por semana para resultados consistentes. Mas mesmo 1 vez por semana já traz benefícios para postura e bem-estar." },
+      { q: "Pilates ajuda com dores nas costas?", a: "Sim! O Pilates é uma das melhores atividades para aliviar e prevenir dores nas costas, fortalecendo a musculatura profunda e melhorando a postura." },
+      { q: "Como funciona a aula experimental?", a: "A aula experimental é gratuita e personalizada. Você passa por uma avaliação inicial e participa de uma sessão para conhecer o método e o studio." },
+      { q: "Gestantes podem praticar Pilates?", a: "Sim! Temos um programa específico para gestantes, com exercícios seguros que ajudam no fortalecimento do assoalho pélvico, postura e preparação para o parto." },
+      { q: "Qual a diferença entre Pilates individual e em grupo?", a: "No individual, o profissional foca 100% em você com um plano exclusivo. No grupo, as turmas são reduzidas (máximo 4 alunos) para manter a qualidade do atendimento." },
+      { q: "Quais formas de pagamento são aceitas?", a: "Aceitamos cartão de crédito, débito e PIX. Os pagamentos são por recorrência automática no cartão, sem preocupação com vencimentos." },
+    ];
+
+    return {
+      services,
+      diffs,
+      team,
+      instaTiles,
+      faqs,
+      visibleTestimonials,
+      nextTestimonial: () => this.setState((s) => ({ testimonialIndex: (s.testimonialIndex + 1) % 5 })),
+      prevTestimonial: () => this.setState((s) => ({ testimonialIndex: (s.testimonialIndex + 4) % 5 })),
+      toggleFollow: () => this.setState((s) => ({ following: !s.following })),
+      followLabel: this.state.following ? "Seguindo ✓" : "Seguir ↗",
+      followBg: this.state.following ? "#f3f4f6" : "#274224",
+      followFg: this.state.following ? "#525252" : "#ffffff",
+      showFloating: this.props.botoesFlutuantes ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>
