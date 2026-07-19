@@ -8,6 +8,15 @@
 <body>
 <x-dc>
 <helmet>
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" data-bg-color="#F8FAF9">
+      <rect width="240" height="240" fill="#F8FAF9"/>
+      <circle cx="120" cy="110" r="52" fill="none" stroke="#274224" stroke-width="6"/>
+      <circle cx="120" cy="110" r="30" fill="#FF8C00"/>
+      <text x="120" y="200" text-anchor="middle" font-family="serif" font-style="italic" font-size="22" fill="#274224">ByFit</text>
+    </svg>
+  </template>
+  <meta name="ext-resource-dependency" content="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" data-resource-id="logo">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
   <style>
@@ -440,30 +449,53 @@
     }
 
 
-    /* Mobile: slow down animations for comfort */
+
+    
+    /* Mobile: pace tuned to feel intentional but not sluggish */
     @media (max-width: 640px) {
-      [data-char] { animation-duration: 1.4s !important; }
-      [data-manifesto] span { transition-duration: 0.9s !important; }
-      section [style*="animation:fadeUp"] { animation-duration: 1.4s !important; }
-      section [style*="animation:clipUp"] { animation-duration: 1.4s !important; }
-      section [style*="animation:softIn"] { animation-duration: 1s !important; }
-      /* Logo intro breathing rooms */
-      #cine-intro.play { animation-duration: 1.4s !important; animation-delay: 2.6s !important; }
-      #cine-intro img[alt="ByFitCompany"] { animation-duration: 1.6s !important; animation-delay: 0.3s !important; }
-      #cine-intro .logo-inner > div[style*="text-align:center"] { animation-duration: 1.2s !important; animation-delay: 1.4s !important; }
-      #cine-intro .logo-inner > div:last-child > div { animation-duration: 1.8s !important; animation-delay: 2s !important; }
-      /* Ring pulses slower */
-      [style*="animation:ringWave"] { animation-duration: 5s !important; }
-      [style*="animation:pulseDot"] { animation-duration: 3.5s !important; }
-      [style*="animation:glowPulse"] { animation-duration: 5s !important; }
-      /* Marquee slower */
-      [style*="animation:marquee"] { animation-duration: 60s !important; }
-      /* Sparkles */
-      [style*="animation:sparkle"] { animation-duration: 6s !important; }
-      /* Card transitions gentler */
-      [data-card], [data-mod], [data-plan], [data-svc-enter] { transition-duration: 0.7s !important; }
-      /* Depo carousel autoplay slower / lerp softer via inline in JS handled below */
+      /* Faster reveals — 2.5s was too long */
+      *, *::before, *::after { animation-duration: 1.4s !important; transition-duration: 0.5s !important; }
+      [data-char] { animation-duration: 0.9s !important; }
+      [data-manifesto] span { transition-duration: 0.7s !important; transition-delay: 0.1s !important; }
+      section [style*="animation:fadeUp"], section [style*="animation:clipUp"], section [style*="animation:softIn"] { animation-duration: 1.2s !important; }
+      /* Loops calm but visible */
+      [style*="animation:ringWave"] { animation-duration: 4s !important; }
+      [style*="animation:pulseDot"] { animation-duration: 2.5s !important; }
+      [style*="animation:glowPulse"] { animation-duration: 4s !important; }
+      [style*="animation:orbit"] { animation-duration: 40s !important; }
+      [style*="animation:counterOrbit"], [style*="animation:counterSpin"] { animation-duration: 40s !important; }
+      [style*="animation:ringSpin"] { animation-duration: 60s !important; }
+      [style*="animation:beamSweep"] { animation-duration: 20s !important; }
+      [style*="animation:sparkle"] { animation-duration: 5s !important; }
+      [style*="animation:marquee"] { animation-duration: 45s !important; }
+      [style*="animation:logoBreathe"] { animation-duration: 5s !important; }
+      [style*="animation:logoTilt"] { animation-duration: 8s !important; }
+      [style*="animation:shimmerBg"], [style*="animation:borderShift"] { animation-duration: 8s !important; }
+      [style*="animation:kenburns"], [style*="animation:blobMorph"], [style*="animation:floatOrbit"] { animation-duration: 20s !important; }
+      [style*="animation:ringPulse"] { animation-duration: 2s !important; }
+      /* Cine-intro: quicker so users don't wait too long */
+      #cine-intro.play { animation-duration: 1s !important; animation-delay: 2.2s !important; }
+      #cine-intro img[alt="ByFitCompany"] { animation-duration: 1.2s !important; animation-delay: 0.2s !important; }
+      #cine-intro .logo-inner > div[style*="text-align:center"] { animation-duration: 0.9s !important; animation-delay: 0.9s !important; }
+      #cine-intro .logo-inner > div:last-child > div { animation-duration: 1.4s !important; animation-delay: 1.4s !important; }
+      /* Card transitions */
+      [data-card], [data-mod], [data-plan], [data-svc-enter] { transition-duration: 0.5s !important; }
+      [data-svc-enter].in { transition-duration: 0.8s !important; }
+      /* Kill all data-mod cursor-tracked spotlights on mobile (heavy composite) */
+      [data-mod]::before, [data-mod]::after { display: none !important; }
+      [data-mod-border]::after { display: none !important; }
+      /* Kill turbulence filter (very expensive on mobile GPU) */
+      .liquid-text { filter: none !important; }
+      /* Kill backdrop-filters (heavy on mobile) */
+      [style*="backdrop-filter"] { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: rgba(255,255,255,0.85) !important; }
+      /* Simplify parallax bg image to native scroll */
+      [data-parallax] { transform: none !important; }
+      [data-kenburns] { animation: none !important; }
+      /* Remove mix-blend-mode difference on section counter (already hidden but safety) */
+      #sec-counter, #vel-meter, #rope-svg, #gl-canvas, #mesh-canvas, .ribbon-svg, .ghost-word, #section-rail, .morph-blob, .ambient-spot, .hero-aura, .stat-ring { display: none !important; }
     }
+
+    /* Restore cine-intro auto-remove timing on mobile */
 
     /* ═══════ v6 MOBILE-FIRST OPTIMIZATIONS ═══════ */
     @media (max-width: 640px) {
@@ -752,7 +784,7 @@
     <div style="max-width:1280px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center" class="stack-tablet">
       <div style="position:relative">
         <div style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);aspect-ratio:4/3;animation:clipUp 1.1s cubic-bezier(0.22,1,0.36,1) both;animation-timeline:view();animation-range:entry 0% entry 60%">
-          <img loading="lazy" decoding="async" src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png" alt="Interior do studio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
+          <img loading="lazy" decoding="async" src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png" alt="Interior do studio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
         </div>
         <div style="position:absolute;bottom:-24px;right:-24px;background:#ffffff;border-radius:16px;box-shadow:0 4px 24px -4px rgba(0,0,0,0.06);padding:16px;border:1px solid #f3f4f6;outline:1px solid rgba(255,140,0,0.15)">
           <img loading="lazy" decoding="async" src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1f545351c_logo.png" alt="Logo" style="height:64px;width:auto;border-radius:8px;display:block">
@@ -1005,7 +1037,7 @@
       </div>
       <div style="position:relative;border-radius:24px;overflow:hidden;box-shadow:0 25px 50px -12px rgba(0,0,0,0.05);animation:clipUp 1.2s cubic-bezier(0.22,1,0.36,1) both;animation-timeline:view();animation-range:entry 0% entry 55%">
         <div style="position:relative;height:75vh">
-          <img loading="lazy" decoding="async" src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png" alt="Interior do estúdio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
+          <img loading="lazy" decoding="async" src="https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png" alt="Interior do estúdio ByFitCompany" style="width:100%;height:100%;object-fit:cover">
           <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,10,10,0.7), rgba(10,10,10,0.1) 50%, transparent)"></div>
         </div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:56px">
@@ -1763,7 +1795,7 @@ class Component extends DCLogic {
     const cine = document.getElementById("cine-intro");
     if (cine) {
       if (perf === "low") cine.remove();
-      else { cine.classList.add("play"); setTimeout(() => cine.remove(), narrow ? 5600 : 4200); }
+      else { cine.classList.add("play"); setTimeout(() => cine.remove(), narrow ? 3500 : 4200); }
     }
 
     // Ambient spots follow scroll (perf:high)
@@ -2435,13 +2467,14 @@ class Component extends DCLogic {
     const visibleTestimonials = [0, 1, 2].map((k) => testimonials[(i + k) % testimonials.length]);
     const allTestimonials = testimonials;
 
+    const R = (window.__resources || {});
     const services = [
-      { title: "Pilates Individual", desc: "Atenção total e plano personalizado para seus objetivos.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png", accent: "#274224" },
-      { title: "Pilates em Grupo", desc: "Motivação, energia e evolução em um ambiente leve.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png", accent: "#274224" },
-      { title: "Pilates para Gestantes", desc: "Segurança e conforto em todas as fases da gestação.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png", accent: "#274224" },
-      { title: "Pilates Terapêutico", desc: "Alívio de dores e reabilitação com acompanhamento especializado.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png", accent: "#274224" },
-      { title: "Reabilitação Postural", desc: "Tratamentos personalizados para correção da postura.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png", accent: "#274224" },
-      { title: "Treinamento Funcional", desc: "Força, resistência e condicionamento com método.", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png", accent: "#FF8C00" },
+      { title: "Pilates Individual", desc: "Atenção total e plano personalizado para seus objetivos.", img: R.svc1 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png", accent: "#274224" },
+      { title: "Pilates em Grupo", desc: "Motivação, energia e evolução em um ambiente leve.", img: R.svc2 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png", accent: "#274224" },
+      { title: "Pilates para Gestantes", desc: "Segurança e conforto em todas as fases da gestação.", img: R.svc3 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png", accent: "#274224" },
+      { title: "Pilates Terapêutico", desc: "Alívio de dores e reabilitação com acompanhamento especializado.", img: R.svc4 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png", accent: "#274224" },
+      { title: "Reabilitação Postural", desc: "Tratamentos personalizados para correção da postura.", img: R.svc5 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png", accent: "#274224" },
+      { title: "Treinamento Funcional", desc: "Força, resistência e condicionamento com método.", img: R.svc6 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png", accent: "#FF8C00" },
     ];
 
     const diffData = [
@@ -2469,22 +2502,22 @@ class Component extends DCLogic {
     });
 
     const team = [
-      { name: "Juliana Mendes", role: "Fisioterapeuta", specialty: "Especialista em Pilates", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1288c490e_generated_2cf5db51.png" },
-      { name: "Rafael Oliveira", role: "Instrutor de Pilates", specialty: "Treinamento Funcional", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/9560c1e92_generated_e7569ea4.png" },
-      { name: "Camila Rocha", role: "Fisioterapeuta", specialty: "Pilates para Gestantes", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/bb65b5474_generated_f8f6d2cf.png" },
-      { name: "Bruno Santos", role: "Instrutor de Pilates", specialty: "Reabilitação Postural", img: "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e910ffe0a_generated_30a0ab42.png" },
+      { name: "Juliana Mendes", role: "Fisioterapeuta", specialty: "Especialista em Pilates", img: R.team1 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1288c490e_generated_2cf5db51.png" },
+      { name: "Rafael Oliveira", role: "Instrutor de Pilates", specialty: "Treinamento Funcional", img: R.team2 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/9560c1e92_generated_e7569ea4.png" },
+      { name: "Camila Rocha", role: "Fisioterapeuta", specialty: "Pilates para Gestantes", img: R.team3 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/bb65b5474_generated_f8f6d2cf.png" },
+      { name: "Bruno Santos", role: "Instrutor de Pilates", specialty: "Reabilitação Postural", img: R.team4 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e910ffe0a_generated_30a0ab42.png" },
     ];
 
     const galleryImgs = [
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png",
-      "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
+      R.svc6 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
+      R.svc4 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/4ae6fde0e_generated_beae56f2.png",
+      R.svc1 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/e18cbbf3b_generated_9b1af26a.png",
+      R.svc2 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/c19d4731f_generated_d923b6fc.png",
+      R.svc3 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/7b3bc6c6f_generated_88346aec.png",
+      R.svc5 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/d4a67fb7c_generated_36698f49.png",
+      R.studio || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/2625d6526_ChatGPTImage1dejulde202601_35_59.png",
+      R.hero || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/1015c33d2_generated_image.png",
+      R.svc6 || "https://media.base44.com/images/public/6a450edb072e1ccc92df6244/97ca5bbaa_generated_9db0d208.png",
     ];
     const igCaptions = [
       "Reformer flow · turma da manhã ✨",
